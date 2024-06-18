@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import {MatGridListModule} from '@angular/material/grid-list'
+
+import { GMPanelComponent } from './gmpanel.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    GMPanelComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+		MatGridListModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [GMPanelComponent]
 })
 export class AppModule { }

@@ -1,0 +1,12 @@
+<div class="container">
+	<mat-grid-list class="grid-list" cols="6" rowHeight="3:2">
+		<div *ngFor="let contestant of contestantsList; let i = index">
+			<mat-grid-tile>{{contestant.name}}</mat-grid-tile>
+			<mat-grid-tile class="button" (click)="givePoints(i, 10)">Give 10 points</mat-grid-tile>
+			<mat-grid-tile class="button" (click)="givePoints(i, 20)">Give 20 points</mat-grid-tile>
+			<mat-grid-tile class="button" (click)="setLife(i, -1)">Lose life</mat-grid-tile>
+			<mat-grid-tile class="button debug" (click)="givePoints(i, -10)">Take 10 points</mat-grid-tile>
+			<mat-grid-tile class="button debug" (click)="setLife(i, 1)">Gain life</mat-grid-tile>
+		</div>
+	</mat-grid-list>
+</div>
